@@ -1,0 +1,93 @@
+/*
+  HOME WOMEN
+*/
+.full-slider-box2{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.f-slide-2{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/images/women.jpg');
+}
+.f-slider-text2 strong font{
+    color: LightPink;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/*
+  HOME MEN
+*/
+.full-slider-box3{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.f-slide-3{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/images/men.jpg');
+}
+.f-slider-text3 strong font{
+    color: LightBlue;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/*ROWS*/
+.article{
+    text-align: center;
+    color: #563434;
+    text-decoration: none;
+}
+
+.grid-container,
+.grid-container1,
+.grid-container2,
+.grid-container3,
+.grid-container4{
+    text-align: center;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    row-gap: 40px;
+}
+.grid-container img,
+.grid-container1 img,
+.grid-container2 img,
+.grid-container3 img,
+.grid-container4 img{
+    height: 350px;
+    border-radius: 10px;
+}
+.grid-container img:hover,
+.grid-container1 img:hover,
+.grid-container2 img:hover,
+.grid-container3 img:hover,
+.grid-container4 img:hover{
+    transform: scale(1.1);
+}
+
+
+/*BUTTONS*/
+.button{
+    display: inline-block;
+    background: #563434;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+.button:hover{
+    background:#c0bda2;
+    color: black;
+    cursor: pointer;
+}

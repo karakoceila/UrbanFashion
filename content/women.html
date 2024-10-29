@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Site e-commerce de vente de vetements en ligne"/>
+        <meta name="keywords" content="HTML5 ,CSS3, JavaScript, e-commerce"/>
+        <title>Urban Fashion</title>
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/women_men.css">
+        <link rel="icon" type="images/png" href="/images/icon.png">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
+        <script src="https://kit.fontawesome.com/d40ac7d8ef.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/javascript/index.js"></script>
+    </head>    
+    <body onload="startTimer()">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="item-left">
+                        <div class="logo"><a href="/index.html"><img src="/images/logo.jpg"></a></div>
+                    </div>
+                    <div class="item-center">
+                        <div class="menu-overlay"></div>
+                        <nav class="menu">
+                            <ul class="menu-main">
+                                <li class="menu-item-acceuil">
+                                    <a href="/index.html"><strong>Home</strong></a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Categories <i class="fas fa-angle-down"></i></a>
+                                    <div class="sub-menu mega-menu mega-menu-column-4">
+                                        <div class="list-item text-center">
+                                            <a href="#">
+                                                <h2 class="title"></h2>
+                                            </a>
+                                        </div>
+                                        <div class="list-item text-center">
+                                            <a href="/content/women.html">
+                                                <h2 href="/content/women.html" class="title">WOMEN</h2>
+                                                <img class="show-img" src="/images/women.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="list-item text-center">
+                                            <a href="#">
+                                                <h2 class="title"></h2>
+                                            </a>
+                                        </div>  
+                                        <div class="list-item text-center">
+                                            <a href="/content/men.html">
+                                                <h2 href="/content/men.html" class="title">MEN</h2>
+                                                <img class="show-img" src="/images/men.jpg" alt="">
+                                            </a>
+                                        </div> 
+                                        <div class="list-item text-center">
+                                            <a href="#">
+                                                <h2 class="title"></h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="item-right">
+                        <a href="#" class="search">
+                            <i class="fas fa-search"></i>
+                        </a>
+
+                        <a href="/content/login.html" class="user">
+                            <i class="far fa-user"></i>
+                        </a>
+
+                        <a href="/content/cart.html"><i class="fas fa-shopping-cart">
+                            <span class="num">0</span></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--SEARCH-->
+        <div class="search-bar">
+            <div class="search-input">
+                <input type="text" placeholder="Search For Product">
+                <a href="#" class="search-cancel">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+        </div>
+
+        <ul id="#adaptive" class="cs-hidden">
+            <li class="item-a">
+                <div class="full-slider-box2 f-slide-2">
+                    <div class="slider-text-container2">
+            
+                        <div class="f-slider-text2">
+                            <strong><font> Women's </font></strong>
+                        </div>
+            
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <br><br><br>
+        <h1 class="article">T-Shirts</h1>
+        <br><br>
+        <div class="grid-container1">
+            <div class="item">
+              <img src="/images/shirt1.jpg" alt=""/><br><br>
+              <div>
+                <h3>Black T-Shirt</h3>
+                <p>Price: <b>1800DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/shirt2.jpg" alt=""/><br><br>
+              <div>
+                <h3>Silk T-Shirt</h3>
+                <p>Price: <b>1800DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/shirt3.jpg" alt=""/><br><br>
+              <div>
+                <h3>T-Shirt</h3>
+                <p>Price: <b>1800DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+        </div>
+
+        <br><hr><br>
+        <h1 class="article">Hoodies</h1>
+        <br><br>
+        <div class="grid-container2">
+            <div class="item">
+              <img src="/images/hoodie1.jpg" alt=""/><br><br>
+              <div>
+                <h3>Black Hoodie</h3>
+                <p>Price: <b>2400DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/hoodie2.jpg" alt=""/><br><br>
+              <div>
+                <h3>Hoodie</h3>
+                <p>Price: <b>2400DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/hoodie3.jpg" alt=""/><br><br>
+              <div>
+                <h3>Brown Hoodie</h3>
+                <p>Price: <b>2400DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+        </div>
+
+        <br><hr><br>
+        <h1 class="article">Dresses</h1>
+        <br><br>
+        <div class="grid-container3">
+            <div class="item">
+              <img src="/images/dress1.jpg" alt=""/><br><br>
+              <div>
+                <h3>Light Pink Dress</h3>
+                <p>Price: <b>3200DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/dress2.jpg" alt=""/><br><br>
+              <div>
+                <h3>Black Dress</h3>
+                <p>Price: <b>3200DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/dress3.jpg" alt=""/><br><br>
+              <div>
+                <h3>Beige Dress</h3>
+                <p>Price: <b>3200DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+        </div>    
+        
+        <br><hr><br>
+        <h1 class="article">Sweatshirts</h1>
+        <br><br>
+        <div class="grid-container4">
+            <div class="item">
+              <img src="/images/sweat1.jpg" alt=""/><br><br>
+              <div>
+                <h3>White Sweat-Shirt</h3>
+                <p>Price: <b>2000DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/sweat2.jpg" alt=""/><br><br>
+              <div>
+                <h3>Sage Green Sweat-Shirt</h3>
+                <p>Price: <b>2000DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+              </a>
+            </div>
+            <div class="item">
+              <img src="/images/sweat3.jpg" alt=""/><br><br>
+              <div>
+                <h3>Blue Sweat-Shirt</h3>
+                <p>Price: <b>2000DA</b></p>
+              </div>
+              <a href="/content/cart.html">
+                <button class="button">BUY IT NOW!</button>
+              </a>
+            </div>
+        </div>
+
+        <footer class="footer-distributed">
+
+          <div class="footer-left">
+              <h3>Urban<span>Fashion</span></h3>
+              <p class="footer-links">
+                  <a href="/index.html" class="link-1">Home</a>
+                  <a href="/content/men.html">Men</a>
+                  <a href="/content/women.html">Women</a>
+              </p>
+              <p class="footer-company-name">Urban Fashion © 2022</p>
+          </div>
+    
+          <div class="footer-center">
+              <div>
+                  <i class="fa fa-map-marker"></i>
+                  <p><span>Bastos</span> Tizi-Ouzou, Algeria</p>
+              </div>
+              <div>
+                  <i class="fa fa-phone"></i>
+                  <p>+213 000 000 000</p>
+              </div>
+              <div>
+                  <i class="fa fa-envelope"></i>
+                  <p><a href="mailto:support@company.com">contact@urbanfashion.com</a></p>
+              </div>
+          </div>
+    
+          <div class="footer-right">
+              <p class="footer-company-about">
+                  <span>About the company</span>
+                  “Get the look of a luxe wardrobe for a reasonable price. Urban Fashion’s clothes are stylish, elegant, and comfortable”              
+              </p>
+              <div class="footer-icons">
+                  <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.fa-discord.com"><i class="fab fa-discord"></i></a>
+                  <a href="https://www.fa-telegram.com"><i class="fab fa-telegram"></i></a>
+              </div>
+          </div>
+    
+      </footer>
+      
+    </body>
+</html>

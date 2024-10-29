@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Site e-commerce de vente de vetements en ligne"/>
+        <meta name="keywords" content="HTML5 ,CSS3, JavaScript, e-commerce"/>
+        <title>CART</title>
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/cart.css">
+        <link rel="icon" type="images/png" href="/images/icon.png">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
+        <script src="https://kit.fontawesome.com/d40ac7d8ef.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/javascript/index.js"></script>
+        <script src="/javascript/cart.js"></script>
+    </head>    
+    
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+</style>
+
+<ul data-role="navBar">
+  <li class="siteName" data-role="navItem">The Urban Fashion</li>
+</ul>
+
+<div class="bodyContainer">
+<h1 class="msg"><i class="fas fa-shopping-cart"></i>   Shopping Cart   </h1>
+
+<hr />
+<div class="row">
+  <div class="col-sm-8"><br>
+    <h4>&nbsp;&nbsp;&nbsp;You have <span data-role="qtyValue">0</span> items in your cart.</h4></br>
+  </div>
+  
+
+<div class="row">
+  <table>
+    <tr>
+      <th> Overview </th>
+      <th> Product </th>
+      <th> Size </th>
+      <th> Color </th>
+      <th> Price </th>
+      <th></th>
+      <th> Quantity </th>
+      <th></th>
+      <th> Subtotal </th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr data-role="lineItem">
+      <td><img src=""></td>
+      <td><select data-role="productsDdl"></select></td>
+      <td>
+        <select class="size">
+          <option value="none">Select Size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </td>
+      <td>
+        <select id="color" name="color">
+          <option value="none">Select Color</option>
+          <option value="Black">Black</option>
+          <option value="White">White</option>
+          <option value="Beige">Beige</option>
+          <option value="Grey">Grey</option>
+          <option value="Brown">Brown</option>
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+      </select>
+      </td>
+      <td data-role="price"></td>
+      <td>x</td>
+      <td><select data-role="qtyDdl"></select></td>
+      <td>=</td>
+      <td data-role="subtotal"></td>
+      <td data-role="addBtn"><button class="button" type="button">Add</button></td>
+      <td data-role="removeBtn"><button class="button" type="button">Remove</button></td>
+    </tr>
+  </table>
+  <div><br />
+
+    <h3>&nbsp;&nbsp;&nbsp;Here's What You're Getting!</h3><br />
+    <ul class="cartList">
+    </ul>
+
+    <br />
+
+    <h4 data-role="total">Total: 0 <span data-role="totalCost"> DA</span></h4>
+    <br />
+    <br />
+
+    <hr />
+  <div data-role="randomButtons">
+    &nbsp;&nbsp;<button class="button" data-role="cancel" type="button">Cancel</button>
+    <button class="button" data-role="checkout" type="button">Check Out</button>
+</div>
+  </div>
+
+<footer class="footer-distributed">
+  <div class="footer-left">
+          <h3>Urban<span>Fashion</span></h3>
+          <p class="footer-links">
+              <a href="/index.html" class="link-1">Home</a>
+              <a href="/content/men.html">Men</a>
+              <a href="/content/women.html">Women</a>
+              <a href="/content/login.html" class="user">
+                  <!--<i class="far fa-user"></i>-->
+                  Log In/Sign Up
+              </a>
+          </p>
+          <p class="footer-company-name">Urban Fashion © 2022</p>
+      </div>
+
+      <div class="footer-center">
+          <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>Bastos</span> Tizi-Ouzou, Algeria</p>
+          </div>
+          <div>
+              <i class="fa fa-phone"></i>
+              <p>+213 000 000 000</p>
+          </div>
+          <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:support@company.com">contact@urbanfashion.com</a></p>
+          </div>
+      </div>
+
+      <div class="footer-right">
+          <p class="footer-company-about">
+              <span>About the company</span>
+              “Get the look of a luxe wardrobe for a reasonable price. Urban Fashion’s clothes are stylish, elegant, and comfortable”              
+          </p>
+          <div class="footer-icons">
+              <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.fa-discord.com"><i class="fab fa-discord"></i></a>
+              <a href="https://www.fa-telegram.com"><i class="fab fa-telegram"></i></a>
+          </div>
+      </div>
+
+  </footer>
+
+  <script>
+    
+    $('[data-role="price"]').html("0 DA");
+$('[data-role="subtotal"]').html("0 DA");
+
+var products = [
+{
+  title: 'Select Article',
+  price: 0.00,
+  image: "/images/overview"
+}, 
+{
+  title: '-FOR MEN-',
+  price: 100,
+  image: "/images/hoodie2h.jpg"
+}, 
+{
+  title: 'T-Shirt M',
+  price: 1800,
+  image: "/images/shirt2h"
+}, 
+{
+  title: 'Hoodie M',
+  price: 2400,
+  image: "/images/hoodie2h.jpg"
+}, 
+{
+  title: 'Sweat-Shirt M',
+  price: 2000,
+  image: "/images/sweat1h.jpg"
+}, 
+{
+  title: 'Jacket',
+  price: 3600,
+  image: "/images/jacket2.jpg"
+},
+{
+  title: 'Heavy jacket',
+  price: 4800,
+  image: "/images/jacket4.jpg"
+}, 
+{
+  title: '-FOR WOMEN-',
+  price: 0.00,
+  image: "/images/shirt2h"
+}, 
+{
+  title: 'T-Shirt W',
+  price: 1800,
+  image: "/images/shirt3.jpg"
+}, 
+{
+  title: 'Hoodie W',
+  price: 2400,
+  image: "/images/hoodie3.jpg"
+}, 
+{
+  title: 'Sweat-Shirt W',
+  price: 2000,
+  image: "/images/sweat3.jpg"
+}, 
+{
+  title: 'Dress',
+  price: 3200,
+  image: "/images/dress2.jpg"
+}, 
+];
+
+function populateProductsDdl(selector, items) {
+  var $options = [];
+
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    $options.push($('<option />', {
+      text: item.title,
+      value: /*"DA" + */ item.price
+    }));
+  }
+  $(selector).html($options);
+}
+
+populateProductsDdl('[data-role="productsDdl"]', products);
+
+//A bad way to load the item's image.
+function populateImage(selector){
+  if( (selector).text() === products[0].title ){
+    $('img').attr('src', "/images/overview.jpg",);
+  }
+  if( (selector).text() === products[1].title ){
+    $('img').attr('src', "/images/men.jpg",);
+  }
+  if( (selector).text() === products[2].title ){
+    $('img').attr('src', "/images/shirt2h.jpg",);
+  }
+  if( (selector).text() === products[3].title ){
+    $('img').attr('src', "/images/hoodie3h.jpg");
+  }
+  if( (selector).text() === products[4].title ){
+    $('img').attr('src', "/images/sweat2h.jpg");
+  }
+  if( (selector).text() === products[5].title ){
+    $('img').attr('src', "/images/jacket1.jpg");
+  }
+  if( (selector).text() === products[6].title ){
+    $('img').attr('src', "/images/jacket4.jpg");
+  }
+  if( (selector).text() === products[7].title ){
+    $('img').attr('src', "/images/women.jpg",);
+  }
+  if( (selector).text() === products[8].title ){
+    $('img').attr('src', "/images/shirt1.jpg");
+  }
+  if( (selector).text() === products[9].title ){
+    $('img').attr('src', "/images/hoodie2.jpg");
+  }
+  if( (selector).text() === products[10].title ){
+    $('img').attr('src', "/images/sweat2.jpg");
+  }
+  if( (selector).text() === products[11].title ){
+    $('img').attr('src', "/images/dress1.jpg");
+  }
+}
+
+//When a product is selected, populate the price
+function populatePrice(selector, priceSelector) {
+  var x = $('<p />', {
+    text: $(selector).val()
+  });
+  $(priceSelector).html(x);
+}
+
+var qtyOptions = [];
+
+//Set the quantity values in the qty dropdown.
+function qtyDdlOptions(someArray, number) {
+
+  for (i = 0; i < number; i++) {
+    someArray.push([i]);
+  }
+}
+
+qtyDdlOptions(qtyOptions, 100);
+
+function populateQtyDdl(selector, items) {
+  var $options = [];
+
+  for (var i = 1; i < items.length; i++) {
+    var item = [i];
+    $options.push($('<option />', {
+      text: item
+    }));
+  }
+  $(selector).html($options);
+}
+
+populateQtyDdl('[data-role="qtyDdl"]', qtyOptions);
+
+//I need to calc the subtotal based on price and qty. It works when hard coded, but not when I try to grab the price value.
+function calcSubtotal() {
+  value1 = $('[data-role="qtyDdl"] :selected').text();
+  value2 = $('[data-role="price"]').text().slice(0);
+  var x = value1 * value2;
+  $('[data-role="subtotal"]').html("DA" + x);
+}
+
+function calcTotal() {
+  var x = $('[data-role="total"]').text();
+  var value1 = $('[data-role="qtyDdl"] :selected').text();
+  var value2 = $('[data-role="price"]').text().slice(0);
+  var x = value1 * value2;
+  $('[data-role="total"]').html("Total: DA" + x);
+}
+
+$('[data-role="productsDdl"]').on("change", function() {
+
+populatePrice('[data-role="productsDdl"]', '[data-role="price"]');
+  
+  
+populateImage($('[data-role="productsDdl"] :selected'));
+ 
+ 
+  //$('img').attr('src', "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=3024702");
+  calcSubtotal();
+})
+
+$('[data-role="qtyDdl"]').on("change", function() {
+  calcSubtotal();
+})
+
+//Changes the quantity in the cart and displays to customer
+$('[data-role="addBtn"]').on("click", function() {
+  var u = $('[data-role="productsDdl"] :selected').text();
+  var x = $('[data-role="qtyDdl"] :selected').text();
+  $('[data-role="qtyValue"]').html(x);
+
+  var y = $('[data-role="productsDdl"] :selected').text();
+  var z = $('[data-role="qtyDdl"] :selected').text();
+
+  $('<li />', { 
+    text: y + " was added to your cart. (Qty: " + z + ")"
+  }).prependTo($('.cartList'));
+
+  calcTotal();
+})
+
+//"Removes the product from the cart. 
+$('[data-role="removeBtn"]').on("click", function() {
+  $('[data-role="productsDdl"] :selected').text("Choose One");
+  //$('[data-role="qtyDdl"] :selected').text("1");
+  //$('[data-role="qtyValue"]').html(0);
+  $('[data-role="subtotal"]').html("0 DA");
+})
+
+$('[data-role="cancel"]').on("click", function() {
+  $('[data-role="qtyValue"]').html(0);
+  $('.cartList').empty();
+  $('[data-role="total"]').text("Total: 0 DA");
+})
+    
+
+//ALERT 
+function login(){
+                window.alert("You should Log In/Sign Up FIRST!!");
+            }
+            
+    </script>
+
+ 
+</body>      
+    
+</html>

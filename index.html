@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Site e-commerce de vente de vetements en ligne"/>
+        <meta name="keywords" content="HTML5 ,CSS3, JavaScript, e-commerce"/>
+        <title>Urban Fashion</title>
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/women_men.css">
+        <link rel="icon" type="images/png" href="/images/icon.png">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
+        <script src="https://kit.fontawesome.com/d40ac7d8ef.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/javascript/index.js"></script>
+    </head>    
+    <body onload="startTimer()">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="item-left">
+                        <div class="logo"><a href="/index.html"><img src="/images/logo.jpg"></a></div>
+                    </div>
+                    <div class="item-center">
+                        <div class="menu-overlay"></div>
+                        <nav class="menu">
+                            <ul class="menu-main">
+                                <li class="menu-item-acceuil">
+                                    <a href="/index.html"><strong>Home</strong></a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Categories <i class="fas fa-angle-down"></i></a>
+                                    <div class="sub-menu mega-menu mega-menu-column-4">
+                                        <div class="list-item text-center">
+                                            <a href="#">
+                                                <h2 class="title"></h2>
+                                            </a>
+                                        </div>
+                                        <div class="list-item text-center">
+                                            <a href="/content/women.html">
+                                                <h2 href="/content/women.html" class="title">WOMEN</h2>
+                                                <img class="show-img" src="/images/women.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="list-item text-center">
+                                            <a href="#">
+                                                <h2 class="title"></h2>
+                                            </a>
+                                        </div>  
+                                        <div class="list-item text-center">
+                                            <a href="/content/men.html">
+                                                <h2 href="/content/men.html" class="title">MEN</h2>
+                                                <img class="show-img" src="/images/men.jpg" alt="">
+                                            </a>
+                                        </div> 
+                                        <div class="list-item text-center">
+                                            <a href="#">
+                                                <h2 class="title"></h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="item-right">
+                        <a href="#" class="search">
+                            <i class="fas fa-search"></i>
+                        </a>
+
+                        <a href="/content/login.html" class="user">
+                            <i class="far fa-user"></i>
+                        </a>
+
+                        <a href="/content/cart.html"><i class="fas fa-shopping-cart">
+                            <span class="num">0</span></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--SEARCH-->
+        <div class="search-bar">
+            <div class="search-input">
+                <input type="text" placeholder="Search For Product">
+                <a href="#" class="search-cancel">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+        </div>
+
+        <ul id="#adaptive" class="cs-hidden">
+            <li class="item-a">
+                <div class="full-slider-box f-slide-1">
+                    <div class="slider-text-container">
+            
+                        <div class="f-slider-text">
+                           <span>urban fashion</span>
+                           <strong>HIGH QUALITY CLOTHING <br>AT <span class="prices">LOW PRICES</span></strong>
+                        </div>
+            
+                    </div>
+                </div>
+            </li>
+        </ul>
+    
+        <br><br>
+        
+        <p class="word1" style="font-style: italic; font-size: x-large">
+                “Style is something each of us already has, all we need to do is find it.”
+                <br/>—Diane von Furstenberg
+        </p> 
+        <br><br><br><hr><br>
+        <div class="box1">    
+            <p >
+                <h1 class="special">Special Offer</h1><br>
+                <h4 class="special details">Limited offer <br>Be quick and get yourself a nice Tee</h4>
+            </p>
+            <div class="image_ch">
+                <img id="img" src="/images/shirt1.jpg">
+                <br><br>
+                <p>
+                    <h3>T-Shirts  </h3><br>
+                    <b>Price: <small class="oldP"> 2200 DA</small> <a class="newP">1800 DA</a></b>
+                </p>
+                <div>
+                    <a href="/content/women.html"> 
+                        <button class="button">SHOP NOW!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <br>
+        <p class="word2" style="font-style: italic; font-size: x-large">
+            "Fashion is the part of the daily air and it changes all the time, with
+            all events.
+            <br> You can even see the approaching of a revolution in clothes.
+            <br>You can see and feel everything in clothes."
+            <br/>—Diana Vreeland
+        </p>
+        <br><hr><br><br><br>
+        
+        <div class="box2">
+            <h1 class="more">Sale of the weekend </h1>
+            <br><br>
+            <div class="grid-container">
+                <div class="item">
+                  <img id="img1" src="/images/jacket3.jpg" alt=""/><br><br>
+                  <div>
+                    <h3>Jackets</h3>
+                    <p>ONLY FOR <b>3600 DA</b></p>
+                  </div>
+                  <div>
+                        <button class="button" onclick="changeImage1();">Previous</button>
+                        <a href="/content/men.html"> 
+                            <button class="button">SHOP NOW!</button>
+                        </a>
+                        <button class="button" onclick="Image1();">Next</button>
+                  </div>
+                </div>
+                <div class="item">
+                    <p class="word2" style="font-style: italic; font-size: 30px">
+                        <br><br><br><br>
+                        "People will stare. <br>Make it worth their while."
+                        <br/>—Harry Winston
+                    </p> 
+                  </div>
+                <div class="item">
+                  <img id="img2" src="/images/dress2.jpg" alt=""/><br><br>
+                  <div>
+                    <h3>Dresses</h3>
+                    <p>ONLY FOR <b>3200DA</b></p>
+                  </div>
+                  <div>
+                      <button class="button" onclick="displayNextImage2();">Previous</button>
+                      <a href="/content/women.html"> 
+                        <button class="button">SHOP NOW!</button>
+                      </a>
+                      <button class="button" onclick="displayPreviousImage2();">Next</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pages">
+            <a href="#">
+                <button class="button">1</button>
+            </a>
+            <a href="#">
+                <button class="button">2</button>
+            </a>
+            <a href="#">
+                <button class="button">3</button>
+            </a>
+        </div>
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+                <h3>Urban<span>Fashion</span></h3>
+                <p class="footer-links">
+                    <a href="/index.html" class="link-1">Home</a>
+                    <a href="/content/men.html">Men</a>
+                    <a href="/content/women.html">Women</a>
+                </p>
+                <p class="footer-company-name">Urban Fashion © 2022</p>
+            </div>
+      
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Bastos</span> Tizi-Ouzou, Algeria</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+213 000 000 000</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">contact@urbanfashion.com</a></p>
+                </div>
+            </div>
+      
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    “Get the look of a luxe wardrobe for a reasonable price. Urban Fashion’s clothes are stylish, elegant, and comfortable”              
+                </p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.fa-discord.com"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.fa-telegram.com"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+      
+        </footer>
+
+    </body>
+</html>
