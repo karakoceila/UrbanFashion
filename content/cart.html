@@ -19,11 +19,78 @@
     
     <style>
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+.centered {
+    text-align: center;
+    margin: 0 auto;
+}
 </style>
 
-<ul data-role="navBar">
-  <li class="siteName" data-role="navItem">The Urban Fashion</li>
-</ul>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="item-left">
+                    <div class="logo"><a href="/index.html"><img src="/images/logo.jpg"></a></div>
+                </div>
+                <div class="item-center">
+                    <div class="menu-overlay"></div>
+                    <nav class="menu">
+                        <ul class="menu-main">
+                            <li class="menu-item-acceuil">
+                                <a href="/index.html"><strong>Home</strong></a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Categories <i class="fas fa-angle-down"></i></a>
+                                <div class="sub-menu mega-menu mega-menu-column-4">
+                                    <div class="list-item text-center">
+                                        <a href="#">
+                                            <h2 class="title"></h2>
+                                        </a>
+                                    </div>
+                                    <div class="list-item text-center">
+                                        <a href="/content/women.html">
+                                            <h2 href="/content/women.html" class="title">WOMEN</h2>
+                                            <img class="show-img" src="/images/women.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="list-item text-center">
+                                        <a href="#">
+                                            <h2 class="title"></h2>
+                                        </a>
+                                    </div>  
+                                    <div class="list-item text-center">
+                                        <a href="/content/men.html">
+                                            <h2 href="/content/men.html" class="title">MEN</h2>
+                                            <img class="show-img" src="/images/men.jpg" alt="">
+                                        </a>
+                                    </div> 
+                                    <div class="list-item text-center">
+                                        <a href="#">
+                                            <h2 class="title"></h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="item-right">
+                    <a href="#" class="search">
+                        <i class="fas fa-search"></i>
+                    </a>
+
+                    <a href="/content/login.html" class="user">
+                        <i class="far fa-user"></i>
+                    </a>
+
+                    <a href="/content/cart.html"><i class="fas fa-shopping-cart">
+                        <span class="num">0</span></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
 
 <div class="bodyContainer">
 <h1 class="msg"><i class="fas fa-shopping-cart"></i>   Shopping Cart   </h1>
@@ -85,7 +152,7 @@
       <td data-role="removeBtn"><button class="button" type="button">Remove</button></td>
     </tr>
   </table>
-  <div><br />
+  <div class="centered"><br />
 
     <h3>&nbsp;&nbsp;&nbsp;Here's What You're Getting!</h3><br />
     <ul class="cartList">
@@ -100,7 +167,9 @@
     <hr />
   <div data-role="randomButtons">
     &nbsp;&nbsp;<button class="button" data-role="cancel" type="button">Cancel</button>
-    <button class="button" data-role="checkout" type="button">Check Out</button>
+    <a href="#" class="checkout-button" onclick="alert('Proceeding to checkout')">
+        <button class="button">Checkout</button>
+    </a>
 </div>
   </div>
 
@@ -316,11 +385,13 @@ function calcSubtotal() {
 }
 
 function calcTotal() {
-  var x = $('[data-role="total"]').text();
-  var value1 = $('[data-role="qtyDdl"] :selected').text();
-  var value2 = $('[data-role="price"]').text().slice(0);
-  var x = value1 * value2;
-  $('[data-role="total"]').html("Total: DA" + x);
+  var total = 0;
+  $('[data-role="lineItem"]').each(function() {
+    var qty = $(this).find('[data-role="qtyDdl"] :selected').text();
+    var price = $(this).find('[data-role="price"]').text().slice(0);
+    total += qty * price;
+  });
+  $('[data-role="total"]').html("Total: DA" + total);
 }
 
 $('[data-role="productsDdl"]').on("change", function() {
